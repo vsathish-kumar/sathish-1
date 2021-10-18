@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function multiply(mat1, mat2, res)
+{ 
+    var i, j, k;
+    
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            res[i][j] = 0;
+            for (k = 0; k < 3; k++)
+                res[i][j] += mat1[i][k] * mat2[k][j];
+        }
+    }
+}
+     var res = new Array;
+    for (let k = 0; k < 3; k++)
+        res[k] = new Array;
+         
+    let mat1 = [ [ 1, 1, 1],
+                 [ 2, 2, 2],
+                 [ 4,5,6 ]
+                       ];
+ 
+    let mat2 = [ [ 4,1,2 ],
+                [ 1,4,4 ],
+                 [ 7,1,4] ];
+ 
+    multiply(mat1, mat2, res);
+ 
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 3; j++)
+    
+
+    console.log(res[i][j])
+}
+</script> 
+</html>
